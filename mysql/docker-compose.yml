@@ -5,7 +5,7 @@ services:
     env_file:
       - ./default.env
     volumes:
-      - ./files/etc/mysql:/etc/mysql/conf.d
+      - ./files/etc/mysql/conf.d:/etc/mysql/conf.d
       - ./files/init:/docker-entrypoint-initdb.d
     ports:
       - "${PORT:-3306}:3306"

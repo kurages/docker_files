@@ -1,4 +1,6 @@
 # mysql
+windowsでは`./files/eol/mysql/my.cnf`は読み取り専用にすること。  
+
 ## 起動
 ```bash
 $ docker compose up
