@@ -1,0 +1,15 @@
+version: "3"
+services:
+  mysql:
+    image: mysql:8
+    env_file:
+      - ./default.env
+    volumes:
+      - ./files/etc/mysql:/etc/mysql/conf.d
+      - ./files/init:/docker-entrypoint-initdb.d
+    ports:
+      - "${PORT:-3306}:3306"
+    tmpfs:
+      - /var/lib/mysql
+      - /var/log/mysql
+
